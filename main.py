@@ -1,8 +1,4 @@
 from random import choice
 from game import game_command
-from variables import var
-
-
-
-var()
+import math
 game_command()

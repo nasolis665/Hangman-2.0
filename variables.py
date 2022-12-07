@@ -1,9 +1,17 @@
 from random import choice
-def var():
-  tries = 6
-  wordlist=('hot', 'got', 'bought', 'fought', 'lot', 'cot')
-  word=choice(wordlist)
-  word_letters=list(word)
-  print(word_letters) ##uncomment if you wanna cheat##
-  letters_found=[]
-  disp_let=[]
+
+test = {
+  "num_lives" : 6,
+  "word_list":  ['hot', 'got', 'bought', 'fought', 'lot', 'cot'],
+  "letters_found":[],
+  "indent" : "------------------",
+  "undscore":[],
+  "dash":'_',
+  "name":input("What is your name? ")
+}
+
+
+# print(test["num_lives"])
+# print(variables)
+# name=input("What is your name? ")
+# print(f"{indent} \n Hello {name} we are playing a game of hang man \n I'm thinking of a {length} letter word and you gotta guess it. \n{indent}")
