@@ -1,4 +1,7 @@
 from random import choice
-from game import game_command
 import math
-game_command()
+from game import *
+from variables import *
+from word import *
+
+game_command(word, test)
