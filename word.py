@@ -1,5 +1,5 @@
 from random import choice
 def choose_word():
-  word_list = ["bot", "hot", "caught","bought","fought"]
+  word_list = ["little", "hobbit","lego", "evins","samuel","mateo","adrian" "nathan", "chungus"]
   word = choice(word_list)
   return word

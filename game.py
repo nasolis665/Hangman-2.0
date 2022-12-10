@@ -24,7 +24,9 @@ def game_command(word, test):
       print(str(test["indent"]) + "\nYou already found this letter! ")
     elif letter in word_letters:
       print(str(test["indent"]) + "\nYou got a letter!")
-      
+      indices=[i for i, x in enumerate(word_letters) if x == letter]
+      for i in indices:
+        undscore[i]=letter
       i = word_letters.index(letter)
       disp_let += word_letters[i]
       undscore[i] = letter
