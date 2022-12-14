@@ -7,10 +7,8 @@ word = choose_word()
 def game_command(word, test):
 
   word_letters = list(word)
-  wl=word_letters
   length = len(word_letters)
   num_lives = 6
-  disp_let = []
   undscore=["_" for letter in word_letters]
   times_guessed = 0
   print(
@@ -20,16 +18,13 @@ def game_command(word, test):
     letter = input(
       str(test["indent"]) + "\nWhat letter do you want to guess? ")
     letter = letter.lower()
-    if (letter in undscore) and (letter not in word_letters):
+    if (letter in undscore):
       print(str(test["indent"]) + "\nYou already found this letter! ")
     elif letter in word_letters:
       print(str(test["indent"]) + "\nYou got a letter!")
       indices=[i for i, x in enumerate(word_letters) if x == letter]
       for i in indices:
         undscore[i]=letter
-      i = word_letters.index(letter)
-      disp_let += word_letters[i]
-      undscore[i] = letter
       print("You have these letter's found: " + str(undscore))
       test["letters_found"].append(letter)
       if undscore==word_letters:
